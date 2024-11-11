@@ -1,0 +1,142 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;  /* Light gray background */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;  /* Dark gray */
+    padding: 15px;
+    color: white;
+}
+
+.navbar h1 {
+    display: inline;
+    font-size: 28px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    float: right;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffcc00;  /* Elegant gold hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #555;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    background-color: #ffcc00;  /* Elegant gold */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #ffb300;  /* Darker gold on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+table th, table td {
+    padding: 14px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;  /* Dark gray */
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+table tr:hover {
+    background-color: #ffecb3;  /* Subtle golden highlight */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;  /* Dark gray */
+    color: white;
+    margin-top: 50px;
+}

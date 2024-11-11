@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Business Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1>LBIMS</h1>
+        <nav>
+            <ul>
+                <li><a href="#add-product">Add Product</a></li>
+                <li><a href="#product-list">Product List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Add Product Section -->
+        <section id="add-product" class="section">
+            <h2>Add Product</h2>
+            <form id="product-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required>
+
+                <label for="product-desc">Description:</label>
+                <textarea id="product-desc" required></textarea>
+
+                <label for="supplier-name">Supplier Name:</label>
+                <input type="text" id="supplier-name" required>
+
+                <label for="supplier-contact">Supplier Contact:</label>
+                <input type="text" id="supplier-contact" required>
+
+                <label for="product-price">Price (₹):</label>
+                <input type="number" id="product-price" required>
+
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" required>
+
+                <label for="record-level">Stock Level:</label>
+                <input type="number" id="record-level" required>
+
+                <label for="transaction-date">Transaction Date:</label>
+                <input type="date" id="transaction-date" required>
+
+                <button type="submit" class="modal-submit-btn">Add Product</button>
+            </form>
+        </section>
+
+        <!-- Product List Section -->
+        <section id="product-list" class="section">
+            <h2>Product List</h2>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Supplier</th>
+                        <th>Contact</th>
+                        <th>Price (₹)</th>
+                        <th>Quantity</th>
+                        <th>Stock Level</th>
+                        <th>Transaction Date</th>
+                    </tr>
+                </thead>
+                <tbody id="product-rows">
+                    <!-- Products will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to handle form submission
+        document.getElementById('product-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get values from the form
+            const productName = document.getElementById('product-name').value;
+            const productDesc = document.getElementById('product-desc').value;
+            const supplierName = document.getElementById('supplier-name').value;
+            const supplierContact = document.getElementById('supplier-contact').value;
+            const productPrice = document.getElementById('product-price').value;
+            const productQuantity = document.getElementById('product-quantity').value;
+            const recordLevel = document.getElementById('record-level').value;
+            const transactionDate = document.getElementById('transaction-date').value;
+
+            // Create a new row in the product table
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${productName}</td>
+                <td>${productDesc}</td>
+                <td>${supplierName}</td>
+                <td>${supplierContact}</td>
+                <td>₹${productPrice}</td>
+                <td>${productQuantity}</td>
+                <td>${recordLevel}</td>
+                <td>${transactionDate}</td>
+            `;
+
+            // Append the new row to the product table
+            document.getElementById('product-rows').appendChild(newRow);
+
+            // Clear form after submission
+            document.getElementById('product-form').reset();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LBIMS - Local Business Inventory Management System</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
